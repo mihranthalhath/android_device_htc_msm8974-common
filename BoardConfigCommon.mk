@@ -102,6 +102,11 @@ TARGET_EXFAT_DRIVER := sdfat
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(PLATFORM_PATH)/config.fs
 
+# CMHW
+BOARD_HARDWARE_CLASS += \
+    hardware/cyanogen/cmhw \
+    $(PLATFORM_PATH)/cmhw
+
 # FM Radio
 AUDIO_FEATURE_ENABLED_FM_POWER_OPT := true
 BOARD_HAVE_QCOM_FM := true

@@ -17,15 +17,18 @@
 
 package org.lineageos.settings.device;
 
+import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
-import android.preference.PreferenceActivity;
 
-public class TouchscreenGestureSettingsActivity extends PreferenceActivity {
+import com.android.settingslib.drawer.SettingsDrawerActivity;
+
+public class TouchscreenGestureSettingsActivity extends SettingsDrawerActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        getFragmentManager().beginTransaction().replace(android.R.id.content,
+        getFragmentManager().beginTransaction().replace(R.id.content_frame,
                 new TouchscreenGestureSettingsFragment()).commit();
     }
 }
