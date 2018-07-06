@@ -23,9 +23,9 @@
         </service>
 
         <activity
-            android:name=".TouchscreenGestureSettingsActivity"
+            android:name=".TouchscreenGestureSettings"
             android:label="@string/screen_gestures_panel_title"
-            android:theme="@style/Theme.Main">
+            android:theme="@android:style/Theme.Material.Settings">
             <intent-filter>
                 <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
             </intent-filter>

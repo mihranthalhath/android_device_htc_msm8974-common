@@ -18,12 +18,20 @@
 package com.cyanogenmod.settings.device;
 
 import android.os.Bundle;
-import android.support.v14.preference.PreferenceFragment;
+import android.preference.PreferenceActivity;
 
-public class TouchscreenGestureSettingsFragment extends PreferenceFragment {
+public class TouchscreenGestureSettings extends PreferenceActivity {
 
     @Override
-    public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.gesture_panel);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        getListView().setPadding(0, 0, 0, 0);
     }
 }
