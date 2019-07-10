@@ -6,7 +6,7 @@
 PRODUCT_PROPERTY_OVERRIDES += \
     af.fast_track_multiplier=1 \
     audio_hal.period_size=192 \
-    av.offload.enable=false \
+    audio.offload.disable=true \
     tunnel.audio.encode=true \
     use.voice.path.for.pcm.voip=false
 
@@ -24,6 +24,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.bluetooth.dun=true \
     ro.bluetooth.hfp.ver=1.6 \
     ro.bluetooth.sap=true \
+    ro.bt.bdaddr_path=/sys/module/htc_bdaddress/parameters/bdaddress \
     ro.qualcomm.bt.hci_transport=smd
 
 # Graphics
